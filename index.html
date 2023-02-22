@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .container__btn {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+      }
+      h3 {
+        color: #003059;
+      }
+      td {
+        background-color: #eff1f7;
+        color: #7f97ac;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__box">
+        <textarea name="pasteArea" id="pasteArea" cols="50" rows="10"></textarea><br />
+        <div class="container__btn">
+          <button id="exemple">exemple</button>
+          <button id="update">Update</button>
+        </div>
+      </div>
+      <div class="container__box">
+        <textarea name="copyArea" id="copyArea" cols="50" rows="10"></textarea>
+        <br />
+        <div class="container__btn">
+          <button id="copy">Copy</button>
+        </div>
+      </div>
+    </div>
+    <h3><strong>2023 (todos os mestrados)</strong></h3>
+    <table class="table-condensed" style="width: 653px">
+      <tbody>
+        <tr>
+          <td style="width: 176px"><strong>DATA</strong></td>
+          <td class="rtecenter" style="width: 479px"><strong>CANDIDATO / TÍTULO</strong></td>
+        </tr>
+
+        <tr id="htmlToCopy">
+          <td style="width: 176px">
+            <p class="small" id="date"></p>
+            <p class="small" id="week"></p>
+            <p class="small" id="time"></p>
+            <p class="small" id="place"></p>
+          </td>
+          <td class="rtecenter" style="width: 479px">
+            <p id="rightData"></p>
+            <!-- <a href="#" id="zoomLink" target="_blank"> Assista Aqui</a> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="main.js"></script>
+  </body>
+</html>
