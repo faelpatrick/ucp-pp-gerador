@@ -36,7 +36,7 @@ function update() {
   let time = datePart.match(/\d\d:\d\d|\d\dh/);
 
   //Place
-  let place = /video|vídeo|conferencia|conferência/i.test(datePart) == true ? " Zoom - Video Conferência " : datePart.match(/Sala.+/i);
+  let place = /video|vídeo|conferencia|conferência|zoom|colibri/i.test(datePart) == true ? " Zoom - Video Conferência " : datePart.match(/Sala.+/i);
 
   //Master degree
   let course = content.match(/Mestrado.+/g);
