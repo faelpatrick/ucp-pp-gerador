@@ -4,6 +4,7 @@ Mestrado em Filosofia, especialização em Filosofia da Religião
 20 de abril de 2023 às 14:30h, na sala 2.1
 Título da Dissertação: “Liberdade e Religião no Pensamento de Donoso Cortés”
 Aluno: MIGUEL QUISSUA QUISSOLA 
+Orientadora D: Berta Maria Marinho Rodrigues Maia – UCP
 Orientadora da Dissertação: Berta Maria Marinho Rodrigues Maia – UCP
 Orientador do Relatório de Estágio: Paulo César Azevedo Dias - UCP
 Presidente: Diana Patrícia da Silva Dias Moreira- UCP
@@ -36,7 +37,8 @@ function update() {
   let time = datePart.match(/\d\d:\d\d|\d\dh/);
 
   //Place
-  let place = /video|vídeo|conferencia|conferência|zoom|colibri/i.test(datePart) == true ? " Zoom - Video Conferência " : datePart.match(/Sala.+/i);
+  let place = /video|vídeo|conferencia|conferência|zoom|colibri/i.test(datePart) == true ? " Zoom - Video Conferência " : datePart.match(/Sala.+/i)[0];
+  place = place.replace("sala", "Sala");
 
   //Master degree
   let course = content.match(/Mestrado.+/g);
@@ -50,6 +52,10 @@ function update() {
   let allItensDesc = content.match(/.+[a-zA-Z\s]:.+/g);
   let allItens = "";
   allItensDesc.forEach((item) => {
+    //check abreviation and corrections
+    if (item.match(/RE:/gi)) item = item.replace("RE:", "do Relatório de Estágio:");
+    if (item.match(/D:/gi)) item = item.replace("D:", "da Dissertação:");
+
     allItens += "<b>" + item.match(/.+[a-zA-Z\s]:.+/g)[0].split(":")[0] + ":</b> ";
     allItens += item.match(/.+[a-zA-Z\s]:.+/g)[0].split(":")[1] + "<br>";
   });

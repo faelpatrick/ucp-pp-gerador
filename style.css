@@ -1,0 +1,59 @@
+body {
+  width: 100%;
+  padding: 0.5em;
+  text-align: center;
+  margin: 1% auto;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.container__btn {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+h3 {
+  color: #003059;
+}
+table.table-condensed {
+  margin: auto;
+  width: 653px;
+}
+td {
+  background-color: #eff1f7;
+  color: #7f97ac;
+  text-align: justify;
+}
+
+button {
+  padding: 1em 1.2em;
+  border-radius: 6px;
+  border: 1px solid #00000042;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  color: white;
+}
+button#exemple {
+  background: orange;
+}
+
+button#update {
+  background: #04a858;
+  color: white;
+}
+
+button#copy {
+  background: cornflowerblue;
+  margin-left: 82%;
+}
+
+footer {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
