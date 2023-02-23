@@ -17,6 +17,14 @@ body {
 h3 {
   color: #003059;
 }
+b,
+strong {
+  font-weight: 700;
+}
+.field-body table p.small,
+.prose table p.small {
+  font-size: 12px;
+}
 table.table-condensed {
   margin: auto;
   width: 653px;
