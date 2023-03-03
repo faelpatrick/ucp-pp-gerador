@@ -6,8 +6,9 @@ body {
 }
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 100px;
 }
 .container__btn {
   display: flex;
