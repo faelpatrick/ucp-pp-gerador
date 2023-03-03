@@ -43,10 +43,6 @@ function update() {
   //Master degree
   let course = content.match(/Mestrado.+/g);
 
-  //Title
-  let titleDesc = content.match(/Título da .+:/g);
-  let title = content.match(/“.+”/g);
-
   //all itens
   //first remove time
   let allItensDesc = content.match(/.+[a-zA-Z\s]:.+/g);
@@ -56,8 +52,13 @@ function update() {
     if (item.match(/RE:/gi)) item = item.replace("RE:", "do Relatório de Estágio:");
     if (item.match(/D:/gi)) item = item.replace("D:", "da Dissertação:");
 
-    allItens += "<b>" + item.match(/.+[a-zA-Z\s]:.+/g)[0].split(":")[0] + ":</b> ";
-    allItens += item.match(/.+[a-zA-Z\s]:.+/g)[0].split(":")[1] + "<br>";
+    //get line with regex by :
+    let line = item.match(/.+[a-zA-Z\s]:.+/g);
+
+    //Use spread operator to split description and content
+    let [description, ...content] = line[0].split(":");
+
+    allItens += "<b>" + description + ":</b> " + content + "<br>";
   });
 
   //Insert in site
