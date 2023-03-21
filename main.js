@@ -37,7 +37,10 @@ function update() {
   let time = datePart.match(/\d\d:\d\d|\d\dh/);
 
   //Place
-  let place = /video|vídeo|conferencia|conferência|zoom|colibri/i.test(datePart) == true ? " Zoom - Video Conferência " : datePart.match(/Sala.+/i)[0];
+  let place =
+    /video|vídeo|conferencia|conferência|zoom|colibri/i.test(datePart) == true
+      ? " Zoom - Video Conferência "
+      : datePart.match(/Sala.+/i)[0];
   place = place.replace("sala", "Sala");
 
   //Master degree
@@ -49,9 +52,14 @@ function update() {
   let allItens = "";
   allItensDesc.forEach((item) => {
     //check abreviation and corrections
-    if (item.match(/RE:/gi)) item = item.replace("RE:", "do Relatório de Estágio:");
+    if (item.match(/RE:/gi))
+      item = item.replace("RE:", "do Relatório de Estágio:");
     if (item.match(/D:/gi)) item = item.replace("D:", "da Dissertação:");
-
+    if (item.match(/Alun.:.+/gi)) {
+      let [desc, name] = item.split(":");
+      item = `${desc}: ${name.toUpperCase()}`;
+      console.log("Name UpperCase");
+    }
     //get line with regex by :
     let line = item.match(/.+[a-zA-Z\s]:.+/g);
 
@@ -69,11 +77,26 @@ function update() {
   document.getElementById("rightData").innerHTML = `
 ${course[0]} <br/>${allItens}
 `;
-  document.getElementById("copyArea").value = "<tr> " + document.getElementById("htmlToCopy").innerHTML + "</tr>";
+  document.getElementById("copyArea").value =
+    "<tr> " + document.getElementById("htmlToCopy").innerHTML + "</tr>";
 }
 
 function getDate(str) {
-  let meses = ["error", "janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+  let meses = [
+    "error",
+    "janeiro",
+    "fevereiro",
+    "março",
+    "abril",
+    "maio",
+    "junho",
+    "julho",
+    "agosto",
+    "setembro",
+    "outubro",
+    "novembro",
+    "dezembro",
+  ];
   let month = 0;
 
   //pegar o dia
@@ -94,8 +117,21 @@ function getDate(str) {
 }
 
 function getWeek(fullDate) {
-  let semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
-  let dateFormated = fullDate.split("/")[2] + "-" + fullDate.split("/")[1] + "-" + fullDate.split("/")[0];
+  let semana = [
+    "Domingo",
+    "Segunda-Feira",
+    "Terça-Feira",
+    "Quarta-Feira",
+    "Quinta-Feira",
+    "Sexta-Feira",
+    "Sábado",
+  ];
+  let dateFormated =
+    fullDate.split("/")[2] +
+    "-" +
+    fullDate.split("/")[1] +
+    "-" +
+    fullDate.split("/")[0];
   let d = new Date(dateFormated);
   return semana[d.getDay()];
 }
