@@ -55,12 +55,14 @@ function update() {
     if (item.match(/RE:/gi))
       item = item.replace("RE:", "do Relatório de Estágio:");
     if (item.match(/D:/gi)) item = item.replace("D:", "da Dissertação:");
+
+    //upper case Studant Name
     if (item.match(/Alun.:.+/gi)) {
       let [desc, name] = item.split(":");
       item = `${desc}: ${name.toUpperCase()}`;
-      console.log("Name UpperCase");
     }
-    //get line with regex by :
+
+    //get line per line with regex by :
     let line = item.match(/.+[a-zA-Z\s]:.+/g);
 
     //Use spread operator to split description and content
@@ -74,9 +76,9 @@ function update() {
   document.getElementById("week").innerHTML = getWeek(fullDate);
   document.getElementById("time").innerHTML = time;
   document.getElementById("place").innerHTML = place;
-  document.getElementById("rightData").innerHTML = `
-${course[0]} <br/>${allItens}
-`;
+  document.getElementById(
+    "rightData"
+  ).innerHTML = `${course[0]} <br/>${allItens}`;
   document.getElementById("copyArea").value =
     "<tr> " + document.getElementById("htmlToCopy").innerHTML + "</tr>";
 }
