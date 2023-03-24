@@ -104,11 +104,11 @@ footer a{
 
   .container, 
   .table-condensed  {
-    max-width: 95vw !important;
+    max-width: 90vw !important;
   }
 
   .container {
-    margin-top: 200px !important;
+    margin-top: 190px !important;
   }
     
 }
