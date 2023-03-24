@@ -13,7 +13,7 @@ Arguente da Dissertação: Isaac Figueiredo de Souza – EMEI`;
 });
 
 // Set year on document
-document.getElementById("#year").innerHTML = new Date().getFullYear();
+document.getElementById("year").innerHTML = new Date().getFullYear();
 
 function copyContent() {
   // Get the text field
