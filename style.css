@@ -100,5 +100,11 @@ footer a{
 @media (max-width: 800px){
   body, header, footer{
     width: 100vw;
+
+
+  .container, 
+  table.table-condensed  {
+    max-width: 95vw !important;
   }
+    
 }
