@@ -78,6 +78,19 @@ footer {
   position: absolute;
   margin: 0 auto;
   text-align: center;
+  left: 0;
   bottom: 0;
-  width: 90%;
+  height: 50px;
+  width: 100%;
+  color: #FFFFFF;
+  background: #a7bcd6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui;
+}
+
+footer a{
+  color: #FFFFFF;
+  margin-left: 10px;
 }
