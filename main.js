@@ -1,16 +1,19 @@
 document.getElementById("exemple").addEventListener("click", () => {
   document.getElementById("pasteArea").value = `    
 Mestrado em Filosofia, especialização em Filosofia da Religião 
-20 de abril de 2023 às 14:30h, na sala 2.1
-Título da Dissertação: “Liberdade e Religião no Pensamento de Donoso Cortés”
-Aluno: MIGUEL QUISSUA QUISSOLA 
-Orientadora D: Berta Maria Marinho Rodrigues Maia – UCP
-Orientadora da Dissertação: Berta Maria Marinho Rodrigues Maia – UCP
-Orientador do Relatório de Estágio: Paulo César Azevedo Dias - UCP
-Presidente: Diana Patrícia da Silva Dias Moreira- UCP
-Arguente do Relatório de Estágio: Fabrizia Raguso – UCP
-Arguente da Dissertação: Ricardo Jorge de Oliveira Peixoto – UCP`;
+10 de JULHO de 1991 às 12:30h, na sala 2.1
+Título da Dissertação: “Utilização da programação para agilizar o processo de trabalho”
+Aluno: Rafael Patrick de Souza 
+Orientador D: José Carlos Sant'Anna – FAJE
+Orientadora da Dissertação: José Carlos Sant'Anna – FAJE
+Orientador do Relatório de Estágio: Guilherme Rodrigues Cardoso - FAJE
+Presidente: António Manuel  da Costa Machado - UCP
+Arguente do Relatório de Estágio: Alana Agnes Figueiredo da Silva – FAMINAS
+Arguente da Dissertação: Isaac Figueiredo de Souza – EMEI`;
 });
+
+// Set year on document
+document.getElementById("#year").innerText = new Date().getFullYear();
 
 function copyContent() {
   // Get the text field
