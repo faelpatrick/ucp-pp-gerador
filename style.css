@@ -9,6 +9,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 100px;
+  margin-top: 90px;
 }
 .container__btn {
   display: flex;
@@ -18,6 +19,13 @@ body {
 
 header{
   background: #a7bcd6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-family: system-ui;
 }
 h3 {
   color: #003059;
