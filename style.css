@@ -110,5 +110,7 @@ footer a{
   .container {
     margin-top: 190px !important;
   }
-    
+  footer {
+    margin-top: 50px !important;
+}
 }
