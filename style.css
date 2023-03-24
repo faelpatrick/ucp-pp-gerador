@@ -76,7 +76,7 @@ button#copy {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   margin: 0 auto;
   text-align: center;
   left: 0;
