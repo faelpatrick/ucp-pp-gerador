@@ -15,6 +15,10 @@ body {
   justify-content: space-between;
   flex-wrap: nowrap;
 }
+
+header{
+  background: #a7bcd6;
+}
 h3 {
   color: #003059;
 }
