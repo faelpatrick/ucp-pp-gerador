@@ -98,7 +98,7 @@ footer a{
 }
 
 @media (max-width: 800px){
-  body{
+  body, header, footer{
     width: 100vw;
   }
 }
