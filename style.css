@@ -98,7 +98,7 @@ footer a {
   margin-left: 10px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   body,
   header,
   footer {
