@@ -42,6 +42,7 @@ strong {
 table.table-condensed {
   margin: auto;
   width: 653px;
+  margin-bottom: 50px;
 }
 td {
   background-color: #eff1f7;
