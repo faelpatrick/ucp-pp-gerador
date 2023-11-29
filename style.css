@@ -121,6 +121,7 @@ footer a {
   .container {
     margin-top: 190px !important;
     margin: 7%;
+    gap: 14px;
   }
 
   .container h1 {
