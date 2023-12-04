@@ -33,7 +33,8 @@ function update() {
   const content = document.getElementById("pasteArea").value;
 
   //Complet Date
-  let datePart = content.match(/\d\d\sde.+/g)[0];
+  let datePart = content.match(/\d?\d\sde.+/g)[0];
+  console.log("datePart: ", datePart);
   let fullDate = getDate(datePart);
 
   //time
