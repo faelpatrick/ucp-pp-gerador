@@ -1,7 +1,7 @@
 document.getElementById("exemple").addEventListener("click", () => {
   document.getElementById("pasteArea").value = `    
 Mestrado em Filosofia, especialização em Filosofia da Religião 
-10 de JULHO de 1991 às 12:30h, na sala 2.1
+1 de JULHO de 1991 às 12:30h, na sala 2.1
 Título da Dissertação: “Utilização da programação: para agilizar o processo de trabalho: Aplicação Pratica”
 Aluno: Rafael Patrick de Souza 
 Orientador D: José Carlos Sant'Anna – FAJE
@@ -34,8 +34,10 @@ function update() {
 
   //Complet Date
   let datePart = content.match(/\d?\d\sde.+/g)[0];
+  datePart = datePart.match(/\d\d\sde.+/g) ? datePart : "0" + datePart;
   console.log("datePart: ", datePart);
   let fullDate = getDate(datePart);
+  console.log("fullDate: ", fullDate);
 
   //time
   let time = datePart.match(/\d\d:\d\d|\d\dh/);
