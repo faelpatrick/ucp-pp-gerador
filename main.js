@@ -35,9 +35,7 @@ function update() {
   //Complet Date
   let datePart = content.match(/\d?\d\sde.+/g)[0];
   datePart = datePart.match(/\d\d\sde.+/g) ? datePart : "0" + datePart;
-  console.log("datePart: ", datePart);
   let fullDate = getDate(datePart);
-  console.log("fullDate: ", fullDate);
 
   //time
   let time = datePart.match(/\d\d:\d\d|\d\dh/);
